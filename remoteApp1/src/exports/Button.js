@@ -1,20 +1,18 @@
 import React from "react";
-import styled from 'styled-components';
 
-const RemoteButton = React.lazy(() => import('marketplace/Button')); 
-
-const Btn = styled.button`
-background: green;
-color: #fff;
-padding: 12;
-`
+const RemoteButton = React.lazy(() => import('hostApp/Button')); 
 
 const style = {
-  background: "#800",
+  background: "green",
   color: "#fff",
   padding: 12,
 };
 
-const Button = () => <><Btn>App 1 Button</Btn><RemoteButton /></>;
+const Button = () => (
+  <>
+    <button styles={style}>Remote App 1 Button</button>
+    <RemoteButton />
+  </>
+);
 
 export default Button;
